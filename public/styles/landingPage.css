@@ -1,0 +1,52 @@
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHaWkAuD2BiExYL1p6ke_WgGdMDPMMbPjpqxmyip8eRNyJ_nxF");
+}
+
+.form-control-lg {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 52%;
+  margin-left: 9em;
+  margin-bottom: 1.5em !important;
+}
+
+#placeholder {
+  margin-top: -7em;
+  margin-bottom: 4em;
+  width: 1em;
+  text-align: -webkit-center;
+  width: 100%;
+}
+
+#popular {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 19em;
+  margin-top: 6em;
+}
+
+#logo {
+  /* width: 30%; */
+  padding: 3em;
+  margin: 5em;
+  margin-bottom: auto;
+  text-align: -webkit-center;
+}
+.logoimg {
+  width: 16em;
+}
+
+.homeimg {
+  vertical-align: middle;
+  border-style: none;
+  width: 12em;
+}
+#search {
+  margin-right: 5px;
+}
+
+#btns {
+  text-align: center;
+}

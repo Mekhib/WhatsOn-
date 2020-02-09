@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/landingPage.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/landingPage.js"></script>
+    <title>Find my show</title>
+  </head>
+
+  <body>
+    <container> </container>
+    <div id="placeholder">
+      <div id="logo">
+        <img
+          src="https://cdn0.iconfinder.com/data/icons/flat-pro-multimedia-set-2/32/tv-vintage-512.png"
+          class="logoimg"
+        />
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Search a Tv show Here</label>
+        <input
+          type="search"
+          class="form-control-lg"
+          aria-describedby="emailHelp"
+          placeholder="Search"
+          id="query"
+        />
+      </div>
+    </form>
+    <div id="btns">
+      <button
+        type="button"
+        id="search"
+        class="btn btn-info"
+        onclick="query(this)"
+      >
+        Search
+      </button>
+      <button type="button" id="lucky" class="btn btn-primary">
+        Random!
+      </button>
+    </div>
+    <div id="popular"></div>
+  </body>
+</html>
