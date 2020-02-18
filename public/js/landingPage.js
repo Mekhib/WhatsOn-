@@ -21,16 +21,16 @@ function populur() {
 populur();
 
 function query(event) {
-  event.preventDefault();
   var val = $(".form-control-lg").val();
   console.log(val);
   var show = val.replace(/ /g, "+");
   console.log(show);
   localStorage.setItem("query", show);
-  $.ajax({
-    type: "GET",
-    url: `/queryresults`
-  }).then(function(res) {
-    console.log(res);
-  });
+  location.href = "/queryresults";
+  //   $.ajax({
+  //     type: "GET",
+  //     url: `/queryresults`
+  //   }).then(function(res) {
+  //     console.log(res);
+  //   });
 }
