@@ -22,26 +22,52 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1 class="display-4">Show Title</h1>
-      <p class="lead">Description</p>
+      <div class="jumbotron-background"></div>
+      <h1 class="display-4" id="title">Show Title</h1>
+      <p class="lead" id="info">Description</p>
       <hr class="my-4" />
-      <p>Genres</p>
+      <p id="genres">Genres</p>
       <a class="btn btn-success btn-lg" href="#" role="button">Offical Site</a>
     </div>
-    <div class="group1">
-      <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-        <div class="card-header">TimeSlot</div>
-        <div class="card-body">
-          <h5 class="card-title">Catch this show @....</h5>
-          <p class="card-text" id="Timeslot">TimeSlot info</p>
+    <div class="stars">
+      <div id="align"></div>
+      <div id="count"></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">TimeSlot</div>
+            <div class="card-body">
+              <h5 class="card-title">Catch this show @....</h5>
+              <p class="card-text" id="Timeslot">TimeSlot info</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Network</div>
-        <div class="card-body">
-          <h5 class="card-title">This show is on.....</h5>
-          <p class="card-text" id="Network">Network info</p>
+        <div class="col-sm-3">
+          <div
+            class="card text-white bg-secondary mb-3"
+            style="max-width: 18rem;"
+          >
+            <div class="card-header">Network</div>
+            <div class="card-body">
+              <h5 class="card-title">This show is on.....</h5>
+              <p class="card-text" id="Network">Network info</p>
+            </div>
+          </div>
         </div>
+        <div class="col-sm-3">
+          <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Seasons</div>
+            <div class="card-body">
+              <h5 class="card-title">This show has...</h5>
+              <p class="card-text" id="seasons">
+                season and epi count.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
       </div>
     </div>
   </body>
