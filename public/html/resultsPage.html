@@ -11,11 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/resultsPage.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
     <script src="../js/resultsPage.js"></script>
 
     <title>Document</title>
@@ -27,20 +29,20 @@
       <p class="lead" id="info">Description</p>
       <hr class="my-4" />
       <p id="genres">Genres</p>
-      <a class="btn btn-success btn-lg" href="#" role="button">Offical Site</a>
+      <a class="btn btn-success btn-lg" href="/" role="button"><img src="https://img.icons8.com/wired/64/000000/homer-simpson.png">Home(r) Page</a>
     </div>
     <div class="stars">
       <div id="align"></div>
       <div id="count"></div>
     </div>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" id="row1">
         <div class="col-sm-3">
           <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-            <div class="card-header">TimeSlot</div>
+            <div class="card-header"><img src="https://img.icons8.com/nolan/64/time.png" class="icons">TimeSlot</div>
             <div class="card-body">
               <h5 class="card-title">Catch this show @....</h5>
-              <p class="card-text" id="Timeslot">TimeSlot info</p>
+              <p class="card-text" id="timeslot">TimeSlot info</p>
             </div>
           </div>
         </div>
@@ -49,25 +51,96 @@
             class="card text-white bg-secondary mb-3"
             style="max-width: 18rem;"
           >
-            <div class="card-header">Network</div>
+            <div class="card-header"><img src="https://img.icons8.com/nolan/64/retro-tv.png" class="icons">Network</div>
             <div class="card-body">
               <h5 class="card-title">This show is on.....</h5>
-              <p class="card-text" id="Network">Network info</p>
+              <p class="card-text" id="network">Network info</p>
             </div>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Seasons</div>
+            <div class="card-header"><img src="https://img.icons8.com/nolan/64/numbered-list.png"class="icons">Seasons</div>
             <div class="card-body">
               <h5 class="card-title">This show has...</h5>
               <p class="card-text" id="seasons">
                 season and epi count.
               </p>
+              <p class="card-text" id="episodes">
+                season and epi count.
+              </p>
             </div>
           </div>
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="https://img.icons8.com/nolan/64/short.png" class="icons">Production info</div>
+            <div class="card-body" id="production">
+              <h5 class="card-title">Production info</h5>
+              <p class="card-text"><ul id="list">
+
+              </ul></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id=row2>
+        <div class="col-sm-6">
+          <div class="card mb-3">
+            <img class="card-img-top" alt="show card" id="sumimg" />
+            <div class="card-header"><img src="https://img.icons8.com/cute-clipart/64/000000/book.png" class="icons">Full Description</div>
+            <div class="card-body" id="sumcard">
+              <h5 class="card-title">Show Summary</h5>
+              <p class="card-text" id="summary">Show Summary</p>
+            </div>
+              <div class="card-footer text-muted" id="debut"><img src="https://img.icons8.com/bubbles/50/000000/clock.png" class="icons">
+                Debut: 
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="episode still" id="epiimg"/>
+            <div class="card-header" id="episodeTitle"><img src="https://img.icons8.com/bubbles/50/000000/tv.png" class="icons">Latest Episode</div>
+            <div class="card-body">
+              <h5 class="card-title" id="episode"></h5>
+              <p class="card-text" id="episodeDescription">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <div class="card-footer text-muted" id="footer"><img src="https://img.icons8.com/bubbles/50/000000/clock.png" class="icons">
+              2 days ago
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-deck" id="deck">
+          <div class="card">
+            <img src="..." class="card-img-top" alt="production company" id="proimg">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://img.icons8.com/ios/50/000000/berlin-tv-tower.png" class="icons" >Production</h5>
+              <p class="card-text" id="proinfo">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="creater image" id="creatorimg">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://img.icons8.com/ios/50/000000/popular-man.png" class="icons">Creator</h5>
+              <p class="card-text" id="creatorinfo">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">main</small></p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="..." class="card-img-top" alt="..." id="siteimg">
+            <div class="card-body">
+              <h5 class="card-title"><img src="https://img.icons8.com/ios/50/000000/external-link.png" class="icons">Offical site</h5>
+              <p class="card-text" id="site">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+              <p class="card-text"><small class="text-muted">Site paths may differ.</small></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
